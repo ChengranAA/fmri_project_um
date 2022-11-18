@@ -1,13 +1,14 @@
 # fMRI Experiment Programming Project
 ## Notes
 
-Folder named **Resources** and **Data** will be ignored by the git program. This way some unecessary resources will be run locally to limit the space took up in git repository.
+Folders named **Resources** and **Data** will be ignored by the git program. This way some unecessary resources will be run locally to limit the space took up in git repository.
 
 
 ## To-do list
 
 - [ ] some thing needs to be added
 - [ ] ...
+- [ ] might be useful if we have a mock scanner program that sends keystroke "5" every 1.5s
 
 ## How to setup the environment
 
