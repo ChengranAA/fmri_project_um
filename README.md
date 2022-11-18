@@ -12,7 +12,7 @@ Folder named **Resources** and **Data** will be ignored by the git program. This
 
 Download the latest version of the Psychopy from their github release page. https://github.com/psychopy/psychopy/releases. The version we use in this study is PsychoPy 2022.2.4. 
 
-The program is a standalone app which don't need any other packages. It contains some necessary libaries which come in handy. The main program opens with three windows. The one we need is the **Runner** window. ![](/Users/lcraaaa/Documents/Files/UM/PSY4253_fmri/course_project/README.assets/Screenshot 2022-11-18 at 12.42.42 PM.png)
+The program is a standalone app which don't need any other packages. It contains some necessary libaries which come in handy. The main program opens with three windows. The one we need is the **Runner** window. ![](README.assets/Screenshot 2022-11-18 at 12.42.42 PM.png)
 
 ## Resources
 
