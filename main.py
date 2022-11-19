@@ -35,13 +35,25 @@ if psychopy_info['psychopyVersion'] != "2022.2.4":
     print("The PsychoPy version is not supported, use 2022.2.4 instead")
     core.quit()
 
+# Experiment information
+expInfo = {'participant':'', 'session': ['Test', 'Experiment']}
+expInfo['Date'] = data.getDateStr()
+
 # GUI
-mydlg = gui.Dlg(title="fMRI course project")
-mydlg.addField('Participant:')
-mydlg.addField('Session:', choices=["Test", "Experiment"])
-ok_data = mydlg.show()
-if mydlg.OK == False:
+dlg = gui.DlgFromDict(expInfo, title='fMRI course project', fixed=['Date'])
+if dlg.OK == False:
     core.quit()
+
+# Data handling
+if os.path.isdir('Data') == False: # check if data file is exist, if not create one
+    os.mkdir('Data')
+fileName = expInfo['participant']+'_'+ expInfo['Date'] + expInfo['session']
+exp_manager = data.ExperimentHandler(name="HRT Paradigm", version='0.1.0', extraInfo=expInfo, \
+                                        dataFileName='Data'+file_sep+fileName) # this is te experiment manager for saving behaviour data and other experiment information
+
+# Hide the mouse
+win.mouseVisible = False
+
 
 # counter function
 def scanner_counter(number): # this function is used to act like a clock to count the time by scanner inputs
@@ -63,7 +75,7 @@ win = visual.Window([1920,1080], allowGUI= True, monitor='testMonitor', units='p
 
 #Generates the Random Order of Trials for the Run as well as Jitter Lengths for each Run with an Average of 2 TRs
 #0,4=sq. house; 1,5=sq. face; 2,6= ov. house; 3,7=ov. face; 4-7=oddball
-trial_seq = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1,2 ,2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 5, 6, 7] 
+trial_seq = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1,2 ,2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 5, 6, 7]
 random.shuffle(trial_seq)
 
 print('Trial Sequence %s' %trial_seq)
@@ -80,9 +92,9 @@ print('Jitter lengths: %s' %(jitter+1))
 # Experiment component
 instruction_text = visual.TextStim(win, pos=[0,0], height=40, text="Instruction", color=[1,1,1], units='pix')
 
-prompts = [visual.TextStim(win, pos=[0,0], height=40, text="prompt square houses", color=[1,1,1], units='pix'), 
-           visual.TextStim(win, pos=[0,0], height=40, text="prompt square faces", color=[1,1,1], units='pix'), 
-           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval houses", color=[1,1,1], units='pix'), 
+prompts = [visual.TextStim(win, pos=[0,0], height=40, text="prompt square houses", color=[1,1,1], units='pix'),
+           visual.TextStim(win, pos=[0,0], height=40, text="prompt square faces", color=[1,1,1], units='pix'),
+           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval houses", color=[1,1,1], units='pix'),
            visual.TextStim(win, pos=[0,0], height=40, text="prompt oval faces", color=[1,1,1], units='pix')]
 
 
@@ -92,7 +104,7 @@ stimuli = np.ndarray((2,4), dtype=object)
 for i in range(4):
     stimuli[0,i] = visual.TextStim(win, pos=[0,0], height=40, text='Square %d' %(i+1), color=[1,1,1], units='pix')
     stimuli[1,i] = visual.TextStim(win, pos=[0,0], height=40, text='Oval %d' %(i+1), color=[1,1,1], units='pix')
-    
+
 
 # Instruction
 instruction_text.draw()
@@ -108,17 +120,17 @@ for i in range(nr_of_trials):
         oddball = random.choice(range(1,4))
     trial_type = trial_type % 4
     stimulus_type = trial_type // 2
-    
+
     # single routine
     scanner_counter(1)  # prompt presentation
     prompts[trial_type].draw()
     win.flip()
-    
+
     scanner_counter(1)  # Jitter between Prompt and Stimulus
     win.flip()
 
     scanner_counter(jitter[i])
-    
+
     for j in range(4):  # Stimulus Presentation
         scanner_counter(1)
         if j == oddball:
@@ -126,11 +138,11 @@ for i in range(nr_of_trials):
         else:
             stimuli[stimulus_type, j].draw()
         win.flip()
-    
+
     scanner_counter(1)  # Intertrial Rest Period
     win.flip()
     scanner_counter(7)
-    
+
 scanner_counter(12) # End of Run Baseline
 
 ## Quit the Experiment
