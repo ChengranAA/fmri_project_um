@@ -51,9 +51,6 @@ fileName = expInfo['participant']+'_'+ expInfo['Date'] + expInfo['session']
 exp_manager = data.ExperimentHandler(name="HRT Paradigm", version='0.1.0', extraInfo=expInfo, \
                                         dataFileName='Data'+file_sep+fileName) # this is te experiment manager for saving behaviour data and other experiment information
 
-# Hide the mouse
-win.mouseVisible = False
-
 
 # counter function
 def scanner_counter(number): # this function is used to act like a clock to count the time by scanner inputs
@@ -70,6 +67,9 @@ def wait_for_TRs(N):
 
 # window initialization
 win = visual.Window([1920,1080], allowGUI= True, monitor='testMonitor', units='pix', fullscr=False)
+
+# Hide the mouse
+win.mouseVisible = False
 
 ## Experiment
 
