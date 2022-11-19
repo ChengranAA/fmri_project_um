@@ -51,51 +51,87 @@ def scanner_counter(number): # this function is used to act like a clock to coun
         if '5' in keys:
             counter += 1
 
+# just as a test, functions exactly as above; maybe preferable because of loop exit after no keypresses for 10s
+def wait_for_TRs(N):
+    for i in range(N):
+        event.waitKeys(maxWait = 10, keyList=['5'])
 
 # window initialization
 win = visual.Window([1920,1080], allowGUI= True, monitor='testMonitor', units='pix', fullscr=False)
 
 ## Experiment
 
+#Generates the Random Order of Trials for the Run as well as Jitter Lengths for each Run with an Average of 2 TRs
+#0,4=sq. house; 1,5=sq. face; 2,6= ov. house; 3,7=ov. face; 4-7=oddball
+trial_seq = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1,2 ,2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 5, 6, 7] 
+random.shuffle(trial_seq)
+
+print('Trial Sequence %s' %trial_seq)
+
+nr_of_trials = len(trial_seq)
+
+print('Nr. of trials: %d' %nr_of_trials)
+
+jitter = np.asarray(range(1, nr_of_trials + 1)) % 3 + 1
+np.random.shuffle(jitter)
+
+print('Jitter lengths: %s' %(jitter+1))
+
 # Experiment component
 instruction_text = visual.TextStim(win, pos=[0,0], height=40, text="Instruction", color=[1,1,1], units='pix')
-prompt = visual.TextStim(win, pos=[0,0], height=40, text="prompt", color=[1,1,1], units='pix')
-stimuli_1 = visual.TextStim(win, pos=[0,0], height=40, text="stimuli_1", color=[1,1,1], units='pix')
-stimuli_2 = visual.TextStim(win, pos=[0,0], height=40, text="stimuli_2", color=[1,1,1], units='pix')
-stimuli_3 = visual.TextStim(win, pos=[0,0], height=40, text="stimuli_3", color=[1,1,1], units='pix')
-stimuli_4 = visual.TextStim(win, pos=[0,0], height=40, text="stimuli_4", color=[1,1,1], units='pix')
+
+prompts = [visual.TextStim(win, pos=[0,0], height=40, text="prompt square houses", color=[1,1,1], units='pix'), 
+           visual.TextStim(win, pos=[0,0], height=40, text="prompt square faces", color=[1,1,1], units='pix'), 
+           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval houses", color=[1,1,1], units='pix'), 
+           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval faces", color=[1,1,1], units='pix')]
 
 
+test = visual.TextStim(win, pos=[0,0], height=40, text="jitter", color=[1,1,1], units='pix')
+
+stimuli = np.ndarray((2,4), dtype=object)
+for i in range(4):
+    stimuli[0,i] = visual.TextStim(win, pos=[0,0], height=40, text='Square %d' %(i+1), color=[1,1,1], units='pix')
+    stimuli[1,i] = visual.TextStim(win, pos=[0,0], height=40, text='Oval %d' %(i+1), color=[1,1,1], units='pix')
+    
 
 # Instruction
 instruction_text.draw()
 win.flip()
 
 # wait for the first few 5 sent by the scanner to proceed
-scanner_counter(10)
+scanner_counter(4)
 
-# single routine
-prompt.draw()
-win.flip()
-scanner_counter(1)
-win.flip()
-scanner_counter(2)
-stimuli_1.draw()
-win.flip()
-scanner_counter(1)
+for i in range(nr_of_trials):
+    trial_type = trial_seq[i]
+    oddball = -1
+    if trial_type >= 4:
+        oddball = random.choice(range(1,4))
+    trial_type = trial_type % 4
+    stimulus_type = trial_type // 2
+    
+    # single routine
+    scanner_counter(1)  # prompt presentation
+    prompts[trial_type].draw()
+    win.flip()
+    
+    scanner_counter(1)  # Jitter between Prompt and Stimulus
+    win.flip()
 
-stimuli_2.draw()
-win.flip()
-scanner_counter(1)
-
-stimuli_3.draw()
-win.flip()
-scanner_counter(1)
-
-stimuli_4.draw()
-win.flip()
-scanner_counter(1)
-
+    scanner_counter(jitter[i])
+    
+    for j in range(4):  # Stimulus Presentation
+        scanner_counter(1)
+        if j == oddball:
+            stimuli[stimulus_type, j - 1].draw()
+        else:
+            stimuli[stimulus_type, j].draw()
+        win.flip()
+    
+    scanner_counter(1)  # Intertrial Rest Period
+    win.flip()
+    scanner_counter(7)
+    
+scanner_counter(12) # End of Run Baseline
 
 ## Quit the Experiment
 win.close()
