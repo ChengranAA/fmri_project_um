@@ -27,7 +27,7 @@ if system_os == "Linux" or system_os == "Darwin":
 elif system_os == "Windows":
     file_sep = '\\'
 else:
-    print("ERROR: system not support")
+    raise Exception('system not supported')
 
 # check Psychopy version
 psychopy_info = info.RunTimeInfo()
