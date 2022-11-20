@@ -24,7 +24,7 @@ else:
 system_os = platform.system()
 if system_os == "Linux" or system_os == "Darwin":
     file_sep = '/'
-elif os == "Windows":
+elif system_os == "Windows":
     file_sep = '\\'
 else:
     print("ERROR: system not support")
