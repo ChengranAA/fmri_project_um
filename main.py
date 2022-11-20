@@ -46,7 +46,11 @@ if dlg.OK == False:
 
 # Data handling
 if os.path.isdir('Data') == False: # check if data file is exist, if not create one
-    os.mkdir('Data')
+    try:
+        os.mkdir('Data')
+    except:
+        print('can\'t create directory, please check permission or your system specification')
+
 fileName = expInfo['participant']+'_'+ expInfo['Date'] + expInfo['session']
 exp_manager = data.ExperimentHandler(name="HRT Paradigm", version='0.1.0', extraInfo=expInfo, \
                                         dataFileName='Data'+file_sep+fileName) # this is te experiment manager for saving behaviour data and other experiment information
@@ -113,6 +117,9 @@ win.flip()
 # wait for the first few 5 sent by the scanner to proceed
 scanner_counter(4)
 
+t = core.getTime()
+exp_manager.addData('experiment.onset',t)
+
 for i in range(nr_of_trials):
     trial_type = trial_seq[i]
     oddball = -1
@@ -122,14 +129,12 @@ for i in range(nr_of_trials):
     stimulus_type = trial_type // 2
 
     # single routine
-    scanner_counter(1)  # prompt presentation
-    prompts[trial_type].draw()
+    prompts[trial_type].draw() # prompt presentation
     win.flip()
+    scanner_counter(1)
 
-    scanner_counter(1)  # Jitter between Prompt and Stimulus
     win.flip()
-
-    scanner_counter(jitter[i])
+    scanner_counter(jitter[i]) # Jitter between Prompt and Stimulus
 
     for j in range(4):  # Stimulus Presentation
         scanner_counter(1)
