@@ -6,9 +6,10 @@ Folders named **Resources** and **Data** will be ignored by the git program. Thi
 
 ## To-do list
 
-- [ ] some thing needs to be added
-- [ ] ...
-- [ ] might be useful if we have a mock scanner program that sends keystroke "5" every 1.5s
+- [ ] Odd ball responses
+- [ ] Save the jitter to a file
+- [ ] Localizer
+- [x] might be useful if we have a mock scanner program that sends keystroke "5" every 1.5s
 
 ## How to setup the environment
 
