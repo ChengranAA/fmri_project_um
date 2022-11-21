@@ -1,5 +1,23 @@
-Condition;Stim1;Stim2;Stim3;Stim4;TimeBetween
-Square House Picture;S1;S2;S3;S4;6
-Square Face Picture;S1;S2;S3;S4;3
-Oval House Picture;O1;O2;O3;O4;6
-Oval Face Picture;O1;O2;O3;O4;3
+Prompt;Stim1;Stim2;Stim3;Stim4;TimeBetween
+Pictures/SHPrompt1.png ;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;1.5
+Pictures/SFPrompt1.png;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;3
+Pictures/OHPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;4.5
+Pictures/OFPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;1.5
+Pictures/SHPrompt1.png ;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;3
+Pictures/SFPrompt1.png;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;4.5
+Pictures/OHPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;1.5
+Pictures/OFPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;3
+Pictures/SHPrompt1.png ;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;4.5
+Pictures/SFPrompt1.png;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;1.5
+Pictures/OHPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;3
+Pictures/OFPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;4.5
+Pictures/SHPrompt1.png ;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;1.5
+Pictures/SFPrompt1.png;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;3
+Pictures/OHPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;4.5
+Pictures/OFPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;1.5
+Pictures/SHPrompt1.png ;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;3
+Pictures/SFPrompt1.png;Pictures/Square1.png;Pictures/Square2.png;Pictures/Square3.png;Pictures/Square4.png;4.5
+Pictures/OHPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;1.5
+Pictures/OFPrompt1;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;3
+Pictures/SFPrompt2.png ;Pictures/Square1.png;Pictures/Square1.png;Pictures/Square3.png;Pictures/Square4.png;4.5
+Pictures/OFPrompt2.png ;Pictures/Oval1.png;Pictures/Oval2.png;Pictures/Oval3.png;Pictures/Oval4.png;3
