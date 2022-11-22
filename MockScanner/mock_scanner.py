@@ -15,10 +15,12 @@ time.sleep(5)
 # start scanner
 print('Start scanner')
 with open('scanner_log.txt', 'w') as f:
-    f.write('Scanner strat\n')
+    f.write('Scanner strat\n') # create log file if there is none, and overwrite the log file
 
+# counter initialise
 counter = 0
 
+# main loop
 while True:
     time.sleep(tr)
     pyautogui.press('5')
