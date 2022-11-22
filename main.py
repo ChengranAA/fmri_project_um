@@ -111,15 +111,18 @@ for i in range(4):
 # Instruction
 instruction_text.draw()
 win.flip()
-
+55
 # wait for the first few 5 sent by the scanner to proceed
+global_scanner_counter = 0
 scanner_counter(4)
-
-t = core.getTime()
+global_scanner_counter += 4
+exp_manager.addData('experiment.onset_tr', global_scanner_counter)
+t = clock.getAbsTime()
 exp_manager.addData('experiment.onset',t)
 
 for i in range(nr_of_trials):
     trial_type = trial_seq[i]
+    exp_manager.addData('trial_type', trial_type)
     oddball = -1
     if trial_type >= 4:
         oddball = random.choice(range(1,4))
@@ -129,22 +132,32 @@ for i in range(nr_of_trials):
     # single routine
     prompts[trial_type].draw() # prompt presentation
     win.flip()
-    scanner_counter(1)
-
+    exp_manager.addData('Prompt.onset', global_scanner_counter)
+    t = clock.getAbsTime()
+    exp_manager.addData('Prompt.onset',t)
+    scanner_counter(1) # prompt delay
     win.flip()
+
+    exp_manager.addData('jitter', 1+jitter[i])
     scanner_counter(1+jitter[i]) # Jitter between Prompt and Stimulus
+    global_scanner_counter = global_scanner_counter + 1 + jitter[i]
 
     for j in range(4):  # Stimulus Presentation
-        scanner_counter(1)
         if j == oddball:
             stimuli[stimulus_type, j - 1].draw()
         else:
             stimuli[stimulus_type, j].draw()
         win.flip()
 
-    scanner_counter(1)  # Intertrial Rest Period
+        exp_manager.addData("Stimuli{}.onset".format(j+1), global_scanner_counter)
+        scanner_counter(1)  # Intertrial Rest Period
+        global_scanner_counter += 1
+        exp_manager.addData('Stimuli{}.offset'.format(j+1), global_scanner_counter)
+
     win.flip()
     scanner_counter(7)
+    global_scanner_counter += 7
+    exp_manager.nextEntry()
 
 scanner_counter(12) # End of Run Baseline
 
