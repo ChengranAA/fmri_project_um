@@ -1,8 +1,6 @@
 """
 Title:
 Author:
-
-
 """
 
 from psychopy import core, visual, gui, data, event, sound, prefs, clock, info
@@ -134,7 +132,7 @@ for i in range(nr_of_trials):
     scanner_counter(1)
 
     win.flip()
-    scanner_counter(jitter[i]) # Jitter between Prompt and Stimulus
+    scanner_counter(1+jitter[i]) # Jitter between Prompt and Stimulus
 
     for j in range(4):  # Stimulus Presentation
         scanner_counter(1)
