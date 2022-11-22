@@ -55,17 +55,17 @@ exp_manager = data.ExperimentHandler(name="HRT Paradigm", version='0.1.0', extra
 
 
 # counter function
+TR_counter_global = 0
+
 def scanner_counter(number): # this function is used to act like a clock to count the time by scanner inputs
     counter = 0
     while counter < number:
         keys = event.getKeys()
         if '5' in keys:
             counter += 1
+            global TR_counter_global
+            TR_counter_global += 1
 
-# just as a test, functions exactly as above; maybe preferable because of loop exit after no keypresses for 10s
-def wait_for_TRs(N):
-    for i in range(N):
-        event.waitKeys(maxWait = 10, keyList=['5'])
 
 # window initialization
 win = visual.Window([1920,1080], allowGUI= True, monitor='testMonitor', units='pix', fullscr=False)
@@ -107,6 +107,13 @@ for i in range(4):
     stimuli[0,i] = visual.TextStim(win, pos=[0,0], height=40, text='Square %d' %(i+1), color=[1,1,1], units='pix')
     stimuli[1,i] = visual.TextStim(win, pos=[0,0], height=40, text='Oval %d' %(i+1), color=[1,1,1], units='pix')
 
+stimulus_presentation_time = 0.35
+
+responses = [] #responses to the oddball stimuli (True = correct response)
+
+correct_slide = visual.TextStim(win, pos=[0,0], height=40, text="Correct", color=[0,1,0], units='pix')
+incorrect_slide = visual.TextStim(win, pos=[0,0], height=40, text="False", color=[1,0,0], units='pix')
+
 
 # Instruction
 instruction_text.draw()
@@ -119,6 +126,10 @@ t = core.getTime()
 exp_manager.addData('experiment.onset',t)
 
 for i in range(nr_of_trials):
+    scanner_counter(1)
+    
+    print('Trial %d on TR %d' %(i + 1, TR_counter_global))
+
     trial_type = trial_seq[i]
     oddball = -1
     if trial_type >= 4:
@@ -132,15 +143,34 @@ for i in range(nr_of_trials):
     scanner_counter(1)
 
     win.flip()
-    scanner_counter(1+jitter[i]) # Jitter between Prompt and Stimulus
+    scanner_counter(jitter[i]) # Jitter between Prompt and Stimulus (previous call of scanner_counter adds the additional TR needed)
 
     for j in range(4):  # Stimulus Presentation
         scanner_counter(1)
+        ob_flag = False
         if j == oddball:
             stimuli[stimulus_type, j - 1].draw()
+            ob_flag = True
         else:
             stimuli[stimulus_type, j].draw()
         win.flip()
+        
+        core.wait(stimulus_presentation_time)
+        win.flip()
+        
+        core.wait(1.4 - stimulus_presentation_time)
+        # check for response in oddball trials
+        if ob_flag:
+            correct_response = False
+            
+            resp = event.getKeys()
+    
+            for key in resp:
+                if key == '1':
+                    correct_response = True
+                    print('Correct Response')
+            responses.append(correct_response)
+
 
     scanner_counter(1)  # Intertrial Rest Period
     win.flip()
