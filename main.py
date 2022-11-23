@@ -118,12 +118,10 @@ incorrect_slide = visual.TextStim(win, pos=[0,0], height=40, text="False", color
 # Instruction
 instruction_text.draw()
 win.flip()
-55
+
 # wait for the first few 5 sent by the scanner to proceed
-global_scanner_counter = 0
 scanner_counter(4)
-global_scanner_counter += 4
-exp_manager.addData('experiment.onset_tr', global_scanner_counter)
+exp_manager.addData('experiment.onset_tr', TR_counter_global)
 t = clock.getAbsTime()
 exp_manager.addData('experiment.onset',t)
 
@@ -140,10 +138,10 @@ for i in range(nr_of_trials):
     trial_type = trial_type % 4
     stimulus_type = trial_type // 2
 
-    # single routine
+    # start of trial
     prompts[trial_type].draw() # prompt presentation
     win.flip()
-    exp_manager.addData('Prompt.onset', global_scanner_counter)
+    exp_manager.addData('Prompt.onset', TR_counter_global) # maybe it makes sense to track trial onset and offset instead of prompts and stimuli, as those are only one TR in length
     t = clock.getAbsTime()
     exp_manager.addData('Prompt.onset',t)
     scanner_counter(1) # prompt delay
@@ -175,16 +173,15 @@ for i in range(nr_of_trials):
                     correct_response = True
                     print('Correct Response')
             responses.append(correct_response)
+    # End of trial
 
+        #exp_manager.addData("Stimuli{}.onset".format(j+1), TR_counter_global) 
+    scanner_counter(1)  # Intertrial Rest Period !! this line should stay at this indentation !!
+        #exp_manager.addData("Stimuli{}.offset".format(j+1), TR_counter_global) 
 
-        exp_manager.addData("Stimuli{}.onset".format(j+1), global_scanner_counter)
-        scanner_counter(1)  # Intertrial Rest Period
-        global_scanner_counter += 1
-        exp_manager.addData('Stimuli{}.offset'.format(j+1), global_scanner_counter)
 
     win.flip()
     scanner_counter(7)
-    global_scanner_counter += 7
     exp_manager.nextEntry()
 
 scanner_counter(12) # End of Run Baseline
