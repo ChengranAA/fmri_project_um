@@ -104,8 +104,8 @@ test = visual.TextStim(win, pos=[0,0], height=40, text="jitter", color=[1,1,1], 
 
 stimuli = np.ndarray((2,4), dtype=object)
 for i in range(4):
-    stimuli[0,i] = visual.TextStim(win, pos=[0,0], height=40, text='Square %d' %(i+1), color=[1,1,1], units='pix')
-    stimuli[1,i] = visual.TextStim(win, pos=[0,0], height=40, text='Oval %d' %(i+1), color=[1,1,1], units='pix')
+    stimuli[0,i] = visual.ImageStim(win, pos=[0,0], image='Pictures%sSquare%d.png' %(file_sep, i+1), units='pix')
+    stimuli[1,i] = visual.ImageStim(win, pos=[0,0], image='Pictures%sOval%d.png' %(file_sep, i+1), units='pix')
 
 stimulus_presentation_time = 0.35
 
