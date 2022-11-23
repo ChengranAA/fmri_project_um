@@ -55,17 +55,17 @@ exp_manager = data.ExperimentHandler(name="HRT Paradigm", version='0.1.0', extra
 
 
 # counter function
+TR_counter_global = 0
+
 def scanner_counter(number): # this function is used to act like a clock to count the time by scanner inputs
     counter = 0
     while counter < number:
         keys = event.getKeys()
         if '5' in keys:
             counter += 1
+            global TR_counter_global
+            TR_counter_global += 1
 
-# just as a test, functions exactly as above; maybe preferable because of loop exit after no keypresses for 10s
-def wait_for_TRs(N):
-    for i in range(N):
-        event.waitKeys(maxWait = 10, keyList=['5'])
 
 # window initialization
 win = visual.Window([1920,1080], allowGUI= True, monitor='testMonitor', units='pix', fullscr=False)
@@ -104,8 +104,15 @@ test = visual.TextStim(win, pos=[0,0], height=40, text="jitter", color=[1,1,1], 
 
 stimuli = np.ndarray((2,4), dtype=object)
 for i in range(4):
-    stimuli[0,i] = visual.TextStim(win, pos=[0,0], height=40, text='Square %d' %(i+1), color=[1,1,1], units='pix')
-    stimuli[1,i] = visual.TextStim(win, pos=[0,0], height=40, text='Oval %d' %(i+1), color=[1,1,1], units='pix')
+    stimuli[0,i] = visual.ImageStim(win, pos=[0,0], image='Pictures%sSquare%d.png' %(file_sep, i+1), units='pix')
+    stimuli[1,i] = visual.ImageStim(win, pos=[0,0], image='Pictures%sOval%d.png' %(file_sep, i+1), units='pix')
+
+stimulus_presentation_time = 0.35
+
+responses = [] #responses to the oddball stimuli (True = correct response)
+
+correct_slide = visual.TextStim(win, pos=[0,0], height=40, text="Correct", color=[0,1,0], units='pix')
+incorrect_slide = visual.TextStim(win, pos=[0,0], height=40, text="False", color=[1,0,0], units='pix')
 
 
 # Instruction
@@ -114,37 +121,67 @@ win.flip()
 
 # wait for the first few 5 sent by the scanner to proceed
 scanner_counter(4)
-
-t = core.getTime()
+exp_manager.addData('experiment.onset_tr', TR_counter_global)
+t = clock.getAbsTime()
 exp_manager.addData('experiment.onset',t)
 
 for i in range(nr_of_trials):
+    scanner_counter(1)
+    # start of trial
+    print('Trial %d on TR %d' %(i + 1, TR_counter_global))
+
     trial_type = trial_seq[i]
+    exp_manager.addData('trial_type', trial_type)
     oddball = -1
     if trial_type >= 4:
         oddball = random.choice(range(1,4))
     trial_type = trial_type % 4
     stimulus_type = trial_type // 2
 
-    # single routine
     prompts[trial_type].draw() # prompt presentation
     win.flip()
-    scanner_counter(1)
-
+    exp_manager.addData('Prompt.onset', TR_counter_global) # maybe it makes sense to track trial onset and offset instead of prompts and stimuli, as those are only one TR in length
+    t = clock.getAbsTime()
+    exp_manager.addData('Prompt.onset',t)
+    scanner_counter(1) # prompt delay
     win.flip()
-    scanner_counter(1+jitter[i]) # Jitter between Prompt and Stimulus
+    scanner_counter(jitter[i]) # Jitter between Prompt and Stimulus (previous call of scanner_counter adds the additional TR needed)
 
     for j in range(4):  # Stimulus Presentation
         scanner_counter(1)
+        ob_flag = False
         if j == oddball:
             stimuli[stimulus_type, j - 1].draw()
+            ob_flag = True
         else:
             stimuli[stimulus_type, j].draw()
         win.flip()
 
-    scanner_counter(1)  # Intertrial Rest Period
+        core.wait(stimulus_presentation_time)
+        win.flip()
+
+        core.wait(1.4 - stimulus_presentation_time)
+        # check for response in oddball trials
+        if ob_flag:
+            correct_response = False
+
+            resp = event.getKeys()
+
+            for key in resp:
+                if key == '1':
+                    correct_response = True
+                    print('Correct Response')
+            responses.append(correct_response)
+    # End of trial
+
+        #exp_manager.addData("Stimuli{}.onset".format(j+1), TR_counter_global) 
+    scanner_counter(1)  # Intertrial Rest Period !! this line should stay at this indentation !!
+        #exp_manager.addData("Stimuli{}.offset".format(j+1), TR_counter_global) 
+
+
     win.flip()
     scanner_counter(7)
+    exp_manager.nextEntry()
 
 scanner_counter(12) # End of Run Baseline
 
