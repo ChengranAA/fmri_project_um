@@ -1,0 +1,156 @@
+﻿condition;TR counter;oddball;participant;session;date;expName;psychopyVersion;frameRate
+Waiting for Scanner;[0, 1, 2, 3, 4];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var5_Prompt;[5];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var5_Jitter;[6, 7];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var5_Stim1;[8];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var5_Stim2;[9];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var5_Stim3;[10];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var5_Stim4;[11];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[12, 13, 14, 15, 16, 17, 18, 19];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_odd_Prompt;[20];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_odd_Jitter;[21, 22, 23];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_odd_Stim1;[24];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_odd_Stim2;[25];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_odd_Stim3;[26];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_odd_Stim4;[27];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[28, 29, 30, 31, 32, 33, 34, 35];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var4_Prompt;[36];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var4_Jitter;[37, 38];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var4_Stim1;[39];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var4_Stim2;[40];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var4_Stim3;[41];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var4_Stim4;[42];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[43, 44, 45, 46, 47, 48, 49, 50];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var3_Prompt;[51];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var3_Jitter;[52, 53];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var3_Stim1;[54];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var3_Stim2;[55];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var3_Stim3;[56];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var3_Stim4;[57];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[58, 59, 60, 61, 62, 63, 64, 65];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_odd_Prompt;[66];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_odd_Jitter;[67, 68];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_odd_Stim1;[69];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_odd_Stim2;[70];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_odd_Stim3;[71];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_odd_Stim4;[72];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[73, 74, 75, 76, 77, 78, 79, 80];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var2_Prompt;[81];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var2_Jitter;[82, 83, 84];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var2_Stim1;[85];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var2_Stim2;[86];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var2_Stim3;[87];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var2_Stim4;[88];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[89, 90, 91, 92, 93, 94, 95, 96];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var4_Prompt;[97];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var4_Jitter;[98];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var4_Stim1;[99];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var4_Stim2;[100];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var4_Stim3;[101];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var4_Stim4;[102];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[103, 104, 105, 106, 107, 108, 109, 110];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var5_Prompt;[111];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var5_Jitter;[112];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var5_Stim1;[113];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var5_Stim2;[114];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var5_Stim3;[115];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var5_Stim4;[116];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[117, 118, 119, 120, 121, 122, 123, 124];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var5_Prompt;[125];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var5_Jitter;[126, 127];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var5_Stim1;[128];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var5_Stim2;[129];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var5_Stim3;[130];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var5_Stim4;[131];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[132, 133, 134, 135, 136, 137, 138, 139];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var1_Prompt;[140];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var1_Jitter;[141, 142, 143];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var1_Stim1;[144];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var1_Stim2;[145];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var1_Stim3;[146];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var1_Stim4;[147];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[148, 149, 150, 151, 152, 153, 154, 155];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var4_Prompt;[156];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var4_Jitter;[157, 158, 159];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var4_Stim1;[160];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var4_Stim2;[161];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var4_Stim3;[162];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var4_Stim4;[163];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[164, 165, 166, 167, 168, 169, 170, 171];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var4_Prompt;[172];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var4_Jitter;[173];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var4_Stim1;[174];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var4_Stim2;[175];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var4_Stim3;[176];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var4_Stim4;[177];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[178, 179, 180, 181, 182, 183, 184, 185];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var3_Prompt;[186];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var3_Jitter;[187, 188, 189];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var3_Stim1;[190];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var3_Stim2;[191];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var3_Stim3;[192];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var3_Stim4;[193];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[194, 195, 196, 197, 198, 199, 200, 201];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var1_Prompt;[202];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var1_Jitter;[203, 204];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var1_Stim1;[205];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var1_Stim2;[206];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var1_Stim3;[207];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var1_Stim4;[208];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[209, 210, 211, 212, 213, 214, 215, 216];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var1_Prompt;[217];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var1_Jitter;[218];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var1_Stim1;[219];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var1_Stim2;[220];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var1_Stim3;[221];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var1_Stim4;[222];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[223, 224, 225, 226, 227, 228, 229, 230];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var2_Prompt;[231];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var2_Jitter;[232, 233];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var2_Stim1;[234];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var2_Stim2;[235];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var2_Stim3;[236];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var2_Stim4;[237];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[238, 239, 240, 241, 242, 243, 244, 245];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var3_Prompt;[246];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var3_Jitter;[247, 248, 249];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var3_Stim1;[250];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var3_Stim2;[251];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var3_Stim3;[252];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OF_var3_Stim4;[253];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[254, 255, 256, 257, 258, 259, 260, 261];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var2_Prompt;[262];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var2_Jitter;[263, 264];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var2_Stim1;[265];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var2_Stim2;[266];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var2_Stim3;[267];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var2_Stim4;[268];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[269, 270, 271, 272, 273, 274, 275, 276];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var5_Prompt;[277];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var5_Jitter;[278, 279, 280];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var5_Stim1;[281];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var5_Stim2;[282];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var5_Stim3;[283];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var5_Stim4;[284];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[285, 286, 287, 288, 289, 290, 291, 292];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var3_Prompt;[293];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var3_Jitter;[294];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var3_Stim1;[295];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var3_Stim2;[296];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var3_Stim3;[297];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SF_var3_Stim4;[298];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[299, 300, 301, 302, 303, 304, 305, 306];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var2_Prompt;[307];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var2_Jitter;[308];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var2_Stim1;[309];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var2_Stim2;[310];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var2_Stim3;[311];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+OH_var2_Stim4;[312];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[313, 314, 315, 316, 317, 318, 319, 320];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var1_Prompt;[321];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var1_Jitter;[322];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var1_Stim1;[323];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var1_Stim2;[324];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var1_Stim3;[325];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+SH_var1_Stim4;[326];[];55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
+rest_scanner;[327, 328, 329, 330, 331, 332, 333, 334];;55776;1;2022-11-23_13h52.39.941;Demo_almost_all_features;04.02.2022;120.3126202
