@@ -127,7 +127,7 @@ exp_manager.addData('experiment.onset',t)
 
 for i in range(nr_of_trials):
     scanner_counter(1)
-
+    # start of trial
     print('Trial %d on TR %d' %(i + 1, TR_counter_global))
 
     trial_type = trial_seq[i]
@@ -138,7 +138,6 @@ for i in range(nr_of_trials):
     trial_type = trial_type % 4
     stimulus_type = trial_type // 2
 
-    # start of trial
     prompts[trial_type].draw() # prompt presentation
     win.flip()
     exp_manager.addData('Prompt.onset', TR_counter_global) # maybe it makes sense to track trial onset and offset instead of prompts and stimuli, as those are only one TR in length
