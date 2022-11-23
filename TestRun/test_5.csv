@@ -1,0 +1,40 @@
+﻿condition;TR counter;jitter_time;oddball_response;participant;session;date;expName;psychopyVersion;frameRate
+Waiting for Scanner;[0, 1, 2, 3, 4];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var5_Prompt;[5];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var5_Jitter;[6, 7, 8];4.5;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var5_Stim1;[9];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var5_Stim2;[10];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var5_Stim3;[11];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var5_Stim4;[12];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+rest_scanner;[13, 14, 15, 16, 17, 18, 19, 20];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var5_Prompt;[21];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var5_Jitter;[22];1.5;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var5_Stim1;[23];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var5_Stim2;[24];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var5_Stim3;[25];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var5_Stim4;[26];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+rest_scanner;[27, 28, 29, 30, 31, 32, 33, 34];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var1_Prompt;[35];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var1_Jitter;[36, 37];3;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var1_Stim1;[38];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var1_Stim2;[39];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var1_Stim3;[40];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SF_var1_Stim4;[41];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+rest_scanner;[42, 43, 44, 45, 46, 47, 48, 49];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var4_Prompt;[50];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var4_Jitter;[51, 52, 53];4.5;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var4_Stim1;[54];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var4_Stim2;[55];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var4_Stim3;[56];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OH_var4_Stim4;[57];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+rest_scanner;[58, 59, 60, 61, 62, 63, 64, 65];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SH_var1_Prompt;[66];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SH_var1_Jitter;[67];1.5;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SH_var1_Stim1;[68];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SH_var1_Stim2;[69];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SH_var1_Stim3;[70];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+SH_var1_Stim4;[71];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+rest_scanner;[72, 73, 74, 75, 76, 77, 78, 79];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OF_var6_Prompt;[80];;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OF_var6_Jitter;[81, 82];3;;729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388
+OF_var6_Stim1;[83];;[];729064;1;2022-11-23_15h29.17.018;Demo_almost_all_features;04.02.2022;119.6839388

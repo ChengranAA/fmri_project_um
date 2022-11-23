@@ -1,29 +1,27 @@
 Prompt;Stim1;Stim2;Stim3;Stim4;TimeBetween;Condition
-Pictures/SHPrompt1.png ;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var1.jpg;created_stimuli_variations/square_3_var1.jpg;created_stimuli_variations/square_4_var1.jpg;1.5;SH_var1
-Pictures/SFPrompt1.png;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var1.jpg;created_stimuli_variations/square_3_var1.jpg;created_stimuli_variations/square_4_var1.jpg;3;SF_var1
-Pictures/OHPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var1.jpg;created_stimuli_variations/oval_3_var1.jpg;created_stimuli_variations/oval_4_var1.jpg;4.5;OH_var1
-Pictures/OFPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var1.jpg;created_stimuli_variations/oval_3_var1.jpg;created_stimuli_variations/oval_4_var1.jpg;1.5;OF_var1
-Pictures/SHPrompt1.png ;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var2.jpg;created_stimuli_variations/square_3_var2.jpg;created_stimuli_variations/square_4_var2.jpg;3;SH_var2
-Pictures/SFPrompt1.png;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var2.jpg;created_stimuli_variations/square_3_var2.jpg;created_stimuli_variations/square_4_var2.jpg;4.5;SF_var2
-Pictures/OHPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var2.jpg;created_stimuli_variations/oval_3_var2.jpg;created_stimuli_variations/oval_4_var2.jpg;1.5;OH_var2
-Pictures/OFPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var2.jpg;created_stimuli_variations/oval_3_var2.jpg;created_stimuli_variations/oval_4_var2.jpg;3;OF_var2
-Pictures/SHPrompt1.png ;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var3.jpg;created_stimuli_variations/square_3_var3.jpg;created_stimuli_variations/square_4_var3.jpg;4.5;SH_var3
-Pictures/SFPrompt1.png;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var3.jpg;created_stimuli_variations/square_3_var3.jpg;created_stimuli_variations/square_4_var3.jpg;1.5;SF_var3
-Pictures/OHPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var3.jpg;created_stimuli_variations/oval_3_var3.jpg;created_stimuli_variations/oval_4_var3.jpg;3;OH_var3
-Pictures/OFPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var3.jpg;created_stimuli_variations/oval_3_var3.jpg;created_stimuli_variations/oval_4_var3.jpg;4.5;OF_var3
-Pictures/SHPrompt1.png ;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var4.jpg;created_stimuli_variations/square_3_var4.jpg;created_stimuli_variations/square_4_var4.jpg;1.5;SH_var4
-Pictures/SFPrompt1.png;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var4.jpg;created_stimuli_variations/square_3_var4.jpg;created_stimuli_variations/square_4_var4.jpg;3;SF_var4
-Pictures/OHPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var4.jpg;created_stimuli_variations/oval_3_var4.jpg;created_stimuli_variations/oval_4_var4.jpg;4.5;OH_var4
-Pictures/OFPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var4.jpg;created_stimuli_variations/oval_3_var4.jpg;created_stimuli_variations/oval_4_var4.jpg;1.5;OF_var4
-Pictures/SHPrompt1.png ;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var5.jpg;created_stimuli_variations/square_3_var5.jpg;created_stimuli_variations/square_4_var5.jpg;3;SH_var5
-Pictures/SFPrompt1.png;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var5.jpg;created_stimuli_variations/square_3_var5.jpg;created_stimuli_variations/square_4_var5.jpg;4.5;SF_var5
-Pictures/OHPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var5.jpg;created_stimuli_variations/oval_3_var5.jpg;created_stimuli_variations/oval_4_var5.jpg;1.5;OH_var5
-Pictures/OFPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var5.jpg;created_stimuli_variations/oval_3_var5.jpg;created_stimuli_variations/oval_4_var5.jpg;3;OF_var5
-Pictures/SFPrompt2.png ;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_3_var2.jpg;created_stimuli_variations/square_4_var2.jpg;4.5;SF_odd
-Pictures/OFPrompt2.png ;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var2.jpg;created_stimuli_variations/oval_2_var2.jpg;created_stimuli_variations/oval_4_var2.jpg;3;OF_odd
-Pictures/SHPrompt1.png ;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var1.jpg;created_stimuli_variations/square_3_var1.jpg;created_stimuli_variations/square_4_var1.jpg;1.5;SH_var1
-Pictures/SFPrompt1.png;created_stimuli_variations/square_1.jpg;created_stimuli_variations/square_2_var1.jpg;created_stimuli_variations/square_3_var1.jpg;created_stimuli_variations/square_4_var1.jpg;3;SF_var1
-Pictures/OHPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var1.jpg;created_stimuli_variations/oval_3_var1.jpg;created_stimuli_variations/oval_4_var1.jpg;4.5;OH_var1
-Pictures/OFPrompt1.png;created_stimuli_variations/oval_1.jpg;created_stimuli_variations/oval_2_var1.jpg;created_stimuli_variations/oval_3_var1.jpg;created_stimuli_variations/oval_4_var1.jpg;3;OF_var1
-;;;;;;
-;;;;;3;
+Pictures/SHPrompt1.png ;stimulus_variations/square_1.png;stimulus_variations/square_2_var1.png;stimulus_variations/square_3_var1.png;stimulus_variations/square_4_var1.png;1.5;SH_var1
+Pictures/SFPrompt1.png;stimulus_variations/square_1.png;stimulus_variations/square_2_var1.png;stimulus_variations/square_3_var1.png;stimulus_variations/square_4_var1.png;3;SF_var1
+Pictures/OHPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var1.png;stimulus_variations/oval_3_var1.png;stimulus_variations/oval_4_var1.png;4.5;OH_var1
+Pictures/OFPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var1.png;stimulus_variations/oval_3_var1.png;stimulus_variations/oval_4_var1.png;1.5;OF_var1
+Pictures/SHPrompt1.png ;stimulus_variations/square_1.png;stimulus_variations/square_2_var2.png;stimulus_variations/square_3_var2.png;stimulus_variations/square_4_var2.png;3;SH_var2
+Pictures/SFPrompt1.png;stimulus_variations/square_1.png;stimulus_variations/square_2_var2.png;stimulus_variations/square_3_var2.png;stimulus_variations/square_4_var2.png;4.5;SF_var2
+Pictures/OHPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var2.png;stimulus_variations/oval_3_var2.png;stimulus_variations/oval_4_var2.png;1.5;OH_var2
+Pictures/OFPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var2.png;stimulus_variations/oval_3_var2.png;stimulus_variations/oval_4_var2.png;3;OF_var2
+Pictures/SHPrompt1.png ;stimulus_variations/square_1.png;stimulus_variations/square_2_var3.png;stimulus_variations/square_3_var3.png;stimulus_variations/square_4_var3.png;4.5;SH_var3
+Pictures/SFPrompt1.png;stimulus_variations/square_1.png;stimulus_variations/square_2_var3.png;stimulus_variations/square_3_var3.png;stimulus_variations/square_4_var3.png;1.5;SF_var3
+Pictures/OHPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var3.png;stimulus_variations/oval_3_var3.png;stimulus_variations/oval_4_var3.png;3;OH_var3
+Pictures/OFPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var3.png;stimulus_variations/oval_3_var3.png;stimulus_variations/oval_4_var3.png;4.5;OF_var3
+Pictures/SHPrompt1.png ;stimulus_variations/square_1.png;stimulus_variations/square_2_var4.png;stimulus_variations/square_3_var4.png;stimulus_variations/square_4_var4.png;1.5;SH_var4
+Pictures/SFPrompt1.png;stimulus_variations/square_1.png;stimulus_variations/square_2_var4.png;stimulus_variations/square_3_var4.png;stimulus_variations/square_4_var4.png;3;SF_var4
+Pictures/OHPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var4.png;stimulus_variations/oval_3_var4.png;stimulus_variations/oval_4_var4.png;4.5;OH_var4
+Pictures/OFPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var4.png;stimulus_variations/oval_3_var4.png;stimulus_variations/oval_4_var4.png;1.5;OF_var4
+Pictures/SHPrompt1.png ;stimulus_variations/square_1.png;stimulus_variations/square_2_var5.png;stimulus_variations/square_3_var5.png;stimulus_variations/square_4_var5.png;3;SH_var5
+Pictures/SFPrompt1.png;stimulus_variations/square_1.png;stimulus_variations/square_2_var5.png;stimulus_variations/square_3_var5.png;stimulus_variations/square_4_var5.png;4.5;SF_var5
+Pictures/OHPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var5.png;stimulus_variations/oval_3_var5.png;stimulus_variations/oval_4_var5.png;1.5;OH_var5
+Pictures/OFPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var5.png;stimulus_variations/oval_3_var5.png;stimulus_variations/oval_4_var5.png;3;OF_var5
+Pictures/SHPrompt1.png ;stimulus_variations/square_1.png;stimulus_variations/square_2_var6.png;stimulus_variations/square_3_var6.png;stimulus_variations/square_4_var6.png;1.5;SH_var6
+Pictures/SFPrompt1.png;stimulus_variations/square_1.png;stimulus_variations/square_2_var6.png;stimulus_variations/square_3_var6.png;stimulus_variations/square_4_var6.png;3;SF_var6
+Pictures/OHPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var6.png;stimulus_variations/oval_3_var6.png;stimulus_variations/oval_4_var6.png;4.5;OH_var6
+Pictures/OFPrompt1.png;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var6.png;stimulus_variations/oval_3_var6.png;stimulus_variations/oval_4_var6.png;3;OF_var6
+Pictures/SFPrompt2.png ;stimulus_variations/square_1.png;stimulus_variations/square_1.png;stimulus_variations/square_3_var2.png;stimulus_variations/square_4_var2.png;4.5;SF_odd
+Pictures/OFPrompt2.png ;stimulus_variations/oval_1.png;stimulus_variations/oval_2_var2.png;stimulus_variations/oval_2_var2.png;stimulus_variations/oval_4_var2.png;3;OF_odd
