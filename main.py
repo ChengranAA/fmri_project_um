@@ -182,6 +182,7 @@ for i in range(nr_of_trials):
         else:
             _stim = random.choice(stimuli[stimulus_type, j])
             _stim.draw()
+        exp_manager.addData("Stimulus{}.img".format(j+1), stimuli.image)
         fixation.draw()
         win.flip()
 
