@@ -105,10 +105,10 @@ for i in range(len(prompts)):
 test = visual.TextStim(win, pos=[0,0], height=40, text="jitter", color=[1,1,1], units='pix')
 
 fixation = visual.ShapeStim(win, pos=[0,0],
-                            vertices=((0, -30), (0, 30), (0,0), (-30,0), (30, 0)),
+                            vertices=((0, -10), (0, 10), (0,0), (-10,0), (10, 0)),
                             lineWidth=3,
                             closeShape=False,
-                            lineColor="white")
+                            lineColor="green")
 
 stimuli = np.ndarray((2,4), dtype=object)
 stimuli[0,0] = [visual.ImageStim(win, pos=[0,0], size=(400,400), image='stimulus_variations%ssquare_1.png' %(file_sep), units='pix')]
@@ -191,8 +191,8 @@ for i in range(nr_of_trials):
         win.flip()
 
         core.wait(stimulus_presentation_time)
-        fixation.draw()
-        win.flip()
+        #fixation.draw()
+        #win.flip()
 
         core.wait(1.4 - stimulus_presentation_time)
         # check for response in oddball trials
