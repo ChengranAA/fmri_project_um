@@ -80,6 +80,8 @@ win.mouseVisible = False
 trial_seq = [0, 0, 0, 0, 0, 1, 1, 1, 1, 1,2 ,2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 5, 6, 7]
 random.shuffle(trial_seq)
 
+trial_type_lookup = ['sq. face', 'sq. house', 'ov. face', 'ov. house', 'sq. face OB', 'sq. house OB', 'ov. face OB', 'ov. house OB']
+
 print('Trial Sequence %s' %trial_seq)
 
 nr_of_trials = len(trial_seq)
@@ -94,20 +96,34 @@ print('Jitter lengths: %s' %(jitter+1))
 # Experiment component
 instruction_text = visual.TextStim(win, pos=[0,0], height=40, text="Instruction", color=[1,1,1], units='pix')
 
-prompts = [visual.TextStim(win, pos=[0,0], height=40, text="prompt square houses", color=[1,1,1], units='pix'),
-           visual.TextStim(win, pos=[0,0], height=40, text="prompt square faces", color=[1,1,1], units='pix'),
-           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval houses", color=[1,1,1], units='pix'),
-           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval faces", color=[1,1,1], units='pix')]
+#prompts = [visual.TextStim(win, pos=[0,0], height=40, text="prompt square houses", color=[1,1,1], units='pix'),
+#           visual.TextStim(win, pos=[0,0], height=40, text="prompt square faces", color=[1,1,1], units='pix'),
+#           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval houses", color=[1,1,1], units='pix'),
+#           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval faces", color=[1,1,1], units='pix')]
 
+prompts =[['SFPrompt1', 'SFPrompt2'],['SQPrompt1'],['OFPrompt1','OFPrompt2'],['OHPrompt1','OHPrompt2']]
+for i in range(len(prompts)):
+    for j in range(len(prompts[i])):
+        prompts[i][j] = visual.ImageStim(win, pos=[0,0], image='Pictures%s%s.png' %(file_sep, prompts[i][j]), units='pix')
+        
 
 test = visual.TextStim(win, pos=[0,0], height=40, text="jitter", color=[1,1,1], units='pix')
 
 stimuli = np.ndarray((2,4), dtype=object)
-for i in range(4):
-    stimuli[0,i] = visual.ImageStim(win, pos=[0,0], image='Pictures%sSquare%d.png' %(file_sep, i+1), units='pix')
-    stimuli[1,i] = visual.ImageStim(win, pos=[0,0], image='Pictures%sOval%d.png' %(file_sep, i+1), units='pix')
+stimuli[0,0] = [visual.ImageStim(win, pos=[0,0], size=(400,400), image='stimulus_variations%ssquare_1.png' %(file_sep), units='pix')]
+stimuli[1,0] = [visual.ImageStim(win, pos=[0,0], size=(400,400), image='stimulus_variations%soval_1.png' %(file_sep), units='pix')]
+for i in range(1,4):
+    _squares = []
+    _ovals = []
+    for j in range(6):
+        _squares.append(visual.ImageStim(win, pos=[0,0], size=(400,400), image='stimulus_variations%ssquare_%d_var%d.png' %(file_sep, i+1, j+1), units='pix'))
+        _ovals.append(visual.ImageStim(win, pos=[0,0], size=(400,400), image='stimulus_variations%soval_%d_var%d.png' %(file_sep, i+1, j+1), units='pix'))
+    stimuli[0,i] = _squares
+    stimuli[1,i] = _ovals
 
-stimulus_presentation_time = 0.35
+_stim = None
+
+stimulus_presentation_time = 0.45
 
 responses = [] #responses to the oddball stimuli (True = correct response)
 
@@ -131,18 +147,21 @@ for i in range(nr_of_trials):
     print('Trial %d on TR %d' %(i + 1, TR_counter_global))
 
     trial_type = trial_seq[i]
-    exp_manager.addData('trial_type', trial_type)
+    exp_manager.addData('trial.type', trial_type_lookup[trial_type])
+    exp_manager.addData('trial.start', TR_counter_global)
     oddball = -1
     if trial_type >= 4:
         oddball = random.choice(range(1,4))
     trial_type = trial_type % 4
     stimulus_type = trial_type // 2
 
-    prompts[trial_type].draw() # prompt presentation
+    _prompt = random.choice(prompts[trial_type])
+    _prompt.draw() # prompt presentation
     win.flip()
     exp_manager.addData('Prompt.onset', TR_counter_global) # maybe it makes sense to track trial onset and offset instead of prompts and stimuli, as those are only one TR in length
     t = clock.getAbsTime()
-    exp_manager.addData('Prompt.onset',t)
+    exp_manager.addData('Prompt.onset_tr',t)
+    exp_manager.addData('Prompt.file', _prompt.image)
     scanner_counter(1) # prompt delay
     win.flip()
     scanner_counter(jitter[i]) # Jitter between Prompt and Stimulus (previous call of scanner_counter adds the additional TR needed)
@@ -151,10 +170,11 @@ for i in range(nr_of_trials):
         scanner_counter(1)
         ob_flag = False
         if j == oddball:
-            stimuli[stimulus_type, j - 1].draw()
+            _stim.draw()
             ob_flag = True
         else:
-            stimuli[stimulus_type, j].draw()
+            _stim = random.choice(stimuli[stimulus_type, j])
+            _stim.draw()
         win.flip()
 
         core.wait(stimulus_presentation_time)
@@ -171,19 +191,23 @@ for i in range(nr_of_trials):
                 if key == '1':
                     correct_response = True
                     print('Correct Response')
+            exp_manager.addData("Response", correct_response) 
             responses.append(correct_response)
     # End of trial
 
-        #exp_manager.addData("Stimuli{}.onset".format(j+1), TR_counter_global) 
+        exp_manager.addData("Stimulus{}".format(j+1), TR_counter_global) 
+    exp_manager.addData("Trial.end".format(j+1), TR_counter_global) 
     scanner_counter(1)  # Intertrial Rest Period !! this line should stay at this indentation !!
-        #exp_manager.addData("Stimuli{}.offset".format(j+1), TR_counter_global) 
-
 
     win.flip()
     scanner_counter(7)
     exp_manager.nextEntry()
 
 scanner_counter(12) # End of Run Baseline
+print('End of experiment on TR %d' %TR_counter_global)
+exp_manager.addData('experiment.end_TR', TR_counter_global)
+t = clock.getAbsTime()
+exp_manager.addData('experiment.end', t)
 
 ## Quit the Experiment
 win.close()
