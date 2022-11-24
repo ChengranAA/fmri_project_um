@@ -900,8 +900,8 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <CodeComponent name="code">
-        <Param val="scanner_msg = &quot;Waiting for Scanner&quot;&amp;#10;counter = 0&amp;#10;counter_list = []" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="scanner_msg = &quot;Waiting for Scanner&quot;;&amp;#10;counter = 0;&amp;#10;counter_list = [];&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="scanner_msg = &quot;Waiting for Scanner&quot;&amp;#10;counter = 1&amp;#10;counter_list = []" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="scanner_msg = &quot;Waiting for Scanner&quot;;&amp;#10;counter = 1;&amp;#10;counter_list = [];&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="filename2 = &quot;test&quot;&amp;#10;thisExp2 = data.ExperimentHandler(name=expName, version='',&amp;#10;    extraInfo=expInfo, runtimeInfo=None,&amp;#10;    originPath='C:\\Users\\herrd\\Documents\\GitHub\\fmri_project_um\\TestRun\\Demo_almost_all_features.py',&amp;#10;    savePickle=True, saveWideText=True,&amp;#10;    dataFileName=filename2)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="filename2 = &quot;test&quot;;&amp;#10;thisExp2 = new data.ExperimentHandler({&quot;name&quot;: expName, &quot;version&quot;: &quot;&quot;, &quot;extraInfo&quot;: expInfo, &quot;runtimeInfo&quot;: null, &quot;originPath&quot;: &quot;C:\\Users\\herrd\\Documents\\GitHub\\fmri_project_um\\TestRun\\Demo_almost_all_features.py&quot;, &quot;savePickle&quot;: true, &quot;saveWideText&quot;: true, &quot;dataFileName&quot;: filename2});&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>

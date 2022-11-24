@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2022.2.4),
-    on November 23, 2022, at 15:29
+    on November 24, 2022, at 15:08
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -30,7 +30,7 @@ from psychopy.hardware import keyboard
 
 # Run 'Before Experiment' code from code
 scanner_msg = "Waiting for Scanner"
-counter = 0
+counter = 1
 counter_list = []
 # Run 'Before Experiment' code from code_4
 condition = ""
