@@ -96,14 +96,13 @@ print('Jitter lengths: %s' %(jitter+1))
 # Experiment component
 instruction_text = visual.TextStim(win, pos=[0,0], height=40, text="Instruction", color=[1,1,1], units='pix')
 
-<<<<<<< Updated upstream
+
 #prompts = [visual.TextStim(win, pos=[0,0], height=40, text="prompt square houses", color=[1,1,1], units='pix'),
 #           visual.TextStim(win, pos=[0,0], height=40, text="prompt square faces", color=[1,1,1], units='pix'),
 #           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval houses", color=[1,1,1], units='pix'),
 #           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval faces", color=[1,1,1], units='pix')]
 
-=======
->>>>>>> Stashed changes
+
 prompts =[['SFPrompt1', 'SFPrompt2'],['SHPrompt1'],['OFPrompt1','OFPrompt2'],['OHPrompt1','OHPrompt2']]
 for i in range(len(prompts)):
     for j in range(len(prompts[i])):
@@ -163,22 +162,20 @@ for i in range(nr_of_trials):
 
     _prompt = random.choice(prompts[trial_type])
     _prompt.draw() # prompt presentation
-<<<<<<< Updated upstream
+
     fixation.draw()
-=======
-    
->>>>>>> Stashed changes
+
     win.flip()
-    
+
     exp_manager.addData('Prompt.onset', TR_counter_global) # maybe it makes sense to track trial onset and offset instead of prompts and stimuli, as those are only one TR in length
     t = clock.getAbsTime()
     exp_manager.addData('Prompt.onset_tr',t)
     exp_manager.addData('Prompt.file', _prompt.image)
-    
+
     scanner_counter(1) # prompt delay
-    
+
     win.flip()
-    
+
     scanner_counter(jitter[i]) # Jitter between Prompt and Stimulus (previous call of scanner_counter adds the additional TR needed)
 
     for j in range(4):  # Stimulus Presentation
