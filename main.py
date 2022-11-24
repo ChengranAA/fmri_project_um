@@ -101,13 +101,19 @@ instruction_text = visual.TextStim(win, pos=[0,0], height=40, text="Instruction"
 #           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval houses", color=[1,1,1], units='pix'),
 #           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval faces", color=[1,1,1], units='pix')]
 
-prompts =[['SFPrompt1', 'SFPrompt2'],['SQPrompt1'],['OFPrompt1','OFPrompt2'],['OHPrompt1','OHPrompt2']]
+prompts =[['SFPrompt1', 'SFPrompt2'],['SHPrompt1'],['OFPrompt1','OFPrompt2'],['OHPrompt1','OHPrompt2']]
 for i in range(len(prompts)):
     for j in range(len(prompts[i])):
         prompts[i][j] = visual.ImageStim(win, pos=[0,0], image='Pictures%s%s.png' %(file_sep, prompts[i][j]), units='pix')
-        
+
 
 test = visual.TextStim(win, pos=[0,0], height=40, text="jitter", color=[1,1,1], units='pix')
+
+fixation = visual.ShapeStim(win, pos=[0,0],
+                            vertices=((0, -30), (0, 30), (0,0), (-30,0), (30, 0)),
+                            lineWidth=5,
+                            closeShape=False,
+                            lineColor="white")
 
 stimuli = np.ndarray((2,4), dtype=object)
 stimuli[0,0] = [visual.ImageStim(win, pos=[0,0], size=(400,400), image='stimulus_variations%ssquare_1.png' %(file_sep), units='pix')]
@@ -157,6 +163,7 @@ for i in range(nr_of_trials):
 
     _prompt = random.choice(prompts[trial_type])
     _prompt.draw() # prompt presentation
+    fixation.draw()
     win.flip()
     exp_manager.addData('Prompt.onset', TR_counter_global) # maybe it makes sense to track trial onset and offset instead of prompts and stimuli, as those are only one TR in length
     t = clock.getAbsTime()
@@ -175,6 +182,7 @@ for i in range(nr_of_trials):
         else:
             _stim = random.choice(stimuli[stimulus_type, j])
             _stim.draw()
+        fixation.draw()
         win.flip()
 
         core.wait(stimulus_presentation_time)
@@ -191,12 +199,12 @@ for i in range(nr_of_trials):
                 if key == '1':
                     correct_response = True
                     print('Correct Response')
-            exp_manager.addData("Response", correct_response) 
+            exp_manager.addData("Response", correct_response)
             responses.append(correct_response)
     # End of trial
 
-        exp_manager.addData("Stimulus{}".format(j+1), TR_counter_global) 
-    exp_manager.addData("Trial.end".format(j+1), TR_counter_global) 
+        exp_manager.addData("Stimulus{}".format(j+1), TR_counter_global)
+    exp_manager.addData("Trial.end".format(j+1), TR_counter_global)
     scanner_counter(1)  # Intertrial Rest Period !! this line should stay at this indentation !!
 
     win.flip()
