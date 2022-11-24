@@ -96,13 +96,6 @@ print('Jitter lengths: %s' %(jitter+1))
 # Experiment component
 instruction_text = visual.TextStim(win, pos=[0,0], height=40, text="Instruction", color=[1,1,1], units='pix')
 
-
-#prompts = [visual.TextStim(win, pos=[0,0], height=40, text="prompt square houses", color=[1,1,1], units='pix'),
-#           visual.TextStim(win, pos=[0,0], height=40, text="prompt square faces", color=[1,1,1], units='pix'),
-#           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval houses", color=[1,1,1], units='pix'),
-#           visual.TextStim(win, pos=[0,0], height=40, text="prompt oval faces", color=[1,1,1], units='pix')]
-
-
 prompts =[['SFPrompt1', 'SFPrompt2'],['SHPrompt1'],['OFPrompt1','OFPrompt2'],['OHPrompt1','OHPrompt2']]
 for i in range(len(prompts)):
     for j in range(len(prompts[i])):
@@ -113,7 +106,7 @@ test = visual.TextStim(win, pos=[0,0], height=40, text="jitter", color=[1,1,1], 
 
 fixation = visual.ShapeStim(win, pos=[0,0],
                             vertices=((0, -30), (0, 30), (0,0), (-30,0), (30, 0)),
-                            lineWidth=5,
+                            lineWidth=3,
                             closeShape=False,
                             lineColor="white")
 
@@ -174,6 +167,8 @@ for i in range(nr_of_trials):
 
     scanner_counter(1) # prompt delay
 
+
+    fixation.draw()
     win.flip()
 
     scanner_counter(jitter[i]) # Jitter between Prompt and Stimulus (previous call of scanner_counter adds the additional TR needed)
@@ -196,6 +191,7 @@ for i in range(nr_of_trials):
         win.flip()
 
         core.wait(stimulus_presentation_time)
+        fixation.draw()
         win.flip()
 
         core.wait(1.4 - stimulus_presentation_time)
@@ -214,9 +210,10 @@ for i in range(nr_of_trials):
     # End of trial
 
         exp_manager.addData("Stimulus{}".format(j+1), TR_counter_global)
-    exp_manager.addData("Trial.end".format(j+1), TR_counter_global)
+    exp_manager.addData("Trial.end", TR_counter_global)
     scanner_counter(1)  # Intertrial Rest Period !! this line should stay at this indentation !!
 
+    fixation.draw()
     win.flip()
     scanner_counter(7)
     exp_manager.nextEntry()
